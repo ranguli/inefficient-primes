@@ -26,6 +26,11 @@ def generateAllPrimes(i, datafile):
 
 ```
 
+## Installation & Dependencies:
+First install dependencies from ```requirements.txt``` as well as the Tkinter package for your OS. On Ubuntu based distros, it's usually called ```python3-tk```
+
+
+## Misc. 
 
 Rather than reinvent the wheel and write a progress function, check how the program is coming along with:
 
