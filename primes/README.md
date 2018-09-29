@@ -1,7 +1,7 @@
 # primes.py
 The #1 high cost, _low effiency_ method for turning electricity into something useful that you can use to _heat your own home!_
 
-[Graph](graph.png)
+![Graph](graph.png)
 
 ## About:
 Data Science has always seemed cool, but it's pretty niche. After making a prime number generator, however, I realized graphing it would be a low-hanging fruit (read: <100 LOC) and an easy introductory project to try out Matplotlib and NumPy. 
