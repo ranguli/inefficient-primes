@@ -1,6 +1,8 @@
 import time, csv, sys
+
 assert sys.version_info >= (3,0)
 
+from numexpr import cpuinfo
 import matplotlib.pyplot as plt
 
 
@@ -52,13 +54,14 @@ def plotTime(datafile):
 
     x = []
     y = []
+    cpu = cpuinfo.cpu.info[0]['model name']
 
     with open(datafile, 'r') as csvfile:
         plots = csv.reader(csvfile, delimiter=',')
         for row in plots:
             x.append(int(row[0]))
             y.append(int(row[1]))
-    plt.plot(x, y, label = 'Iterative Generation')
+    plt.plot(x, y, label = "Iterative (" + cpu + ")")
     plt.xlabel('Prime Number')
     plt.ylabel('Execution Time')
     plt.title("Prime Number Generation over Execution Time")
