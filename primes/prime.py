@@ -12,14 +12,12 @@ datafile = "primes.csv"
 x = []
 y = []
 
-
 def isPrime(i):
     prime = True
     for j in range(2, i):
         if (i % j == 0):
             prime = False
     return prime
-
 
 def generateAllPrimes(i, datafile):
     startTime = time.time()
@@ -30,15 +28,14 @@ def generateAllPrimes(i, datafile):
             f.write(str(j) + "," + str(executionTime) + "\n")
     f.close()
 
-
 def main(datafile):
     i = int(input("Enter a number to generate primes below it: "))
     startTime = time.time()
     primes = generateAllPrimes(i, datafile)
     if (isPrime(i)):
-        print(str(i) + " itself is a prime number,", end='')
+        print(str(i) + " itself is a prime number,", end = '')
     else:
-        print(str(i) + " itself is not a prime number,", end='')
+        print(str(i) + " itself is not a prime number,", end = '')
 
     print(" and it took " + str(round(time.time() - startTime, 2)) +
           " seconds to figure that out.")
@@ -46,8 +43,7 @@ def main(datafile):
     print("Your number is " + str(23249425 - i) + " less than the highest prime number ever discovered.")
 
 
-def plotTime(datafile):
-
+def plotTime(datafile): 
     # Frankly, I didn't care to learn matplotlib this time around.
     # This code is from:
     # https://pythonprogramming.net/loading-file-data-matplotlib-tutorial/
